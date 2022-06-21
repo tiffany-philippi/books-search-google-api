@@ -1,0 +1,64 @@
+.SearchBookForm {
+    margin-top: 40px;
+    padding: 0 40px;
+
+    @media (max-width: 796px) {
+        padding: 0 20px;
+    }
+
+    .SearchContainer {
+        width: 100%;
+
+        .SearchInput {
+            padding: 0 16px;
+            font-size: 16px;
+            height: 68px;
+            border-radius: 6px;
+            border: 1px solid #767676;
+            width: calc(100% - 34px);
+        }
+
+        .SearchButton {
+            position: absolute;
+            right: 40px;
+            font-size: 21px;
+            text-transform: uppercase;
+            height: 70px;
+            background-color: #0C2F3F;
+            color: white;
+            font-weight: 600;
+            width: 200px;
+            border-radius: 0 6px 6px 0px;
+            border: 1px solid #767676;
+            cursor: pointer;
+            
+            @media (max-width: 796px) {
+                font-size: smaller;
+                width: 30%;
+                right: 20px;
+            }
+        }
+    }
+}
+
+.DisplayNone {
+    display: none;
+}
+
+.SearchImage {
+    text-align: center;
+    opacity: 0.2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 88px - 70px - 40px);
+
+    img {
+        width: 400px;
+        padding: 20px;
+        
+        @media (max-width: 796px) {
+            width: 200px;
+        }
+    }
+}
