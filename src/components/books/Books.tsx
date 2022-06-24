@@ -10,7 +10,6 @@ function Books() {
     
     useEffect(() => {
         if (search) {
-            console.log(search)
             fetch(`${url}/volumes?q=${search}&key=${apiKey}`)
                 .then((res) => res.json())
                     .then((data) => {
