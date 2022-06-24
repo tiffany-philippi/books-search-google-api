@@ -10,11 +10,17 @@ function Books() {
     
     useEffect(() => {
         if (search) {
+            console.log(search)
             fetch(`${url}/volumes?q=${search}&key=${apiKey}`)
                 .then((res) => res.json())
-                    .then((res) => {
-                        setBooks(res)
+                    .then((data) => {
+                        setBooks(data)
+                    }).catch(err => {
+                        console.error('Error fetching data', err)
                     })
+                    
+        } else {
+            setBooks([])
         }
     }, [search]);
 
